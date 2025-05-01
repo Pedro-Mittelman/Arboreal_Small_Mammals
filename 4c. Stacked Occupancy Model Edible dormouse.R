@@ -82,47 +82,6 @@ for (i in 1:length(enddfsc$id_occasion)) {
   detection_data.glis.occu[enddfsc$id_occasion[i],(enddfsc$Occasion[i]+1):max.endoccasion]  <- NA
 }
 
-# # #adding weeks of Nas because each season must have the same number of weeks
-# # detection_data.glis.occu[,29:30] <- NA
-# detection_data.glis.occu[,27:30] <- NA
-# spring_glis <- detection_data.glis.occu[, 1:10]
-# summer_glis <- detection_data.glis.occu[, 11:20]
-# autumn_glis <- detection_data.glis.occu[, 21:30]
-# 
-# 
-# # Add site names to each season
-# sites <- rownames(spring_glis)
-# 
-# spring_glis_df <- spring_glis %>% 
-#   mutate(site = sites, season = "spring_glis")
-# 
-# summer_glis_df <- summer_glis %>% 
-#   mutate(site = sites, season = "summer_glis")
-# 
-# autumn_glis_df <- autumn_glis %>% 
-#   mutate(site = sites, season = "autumn_glis")
-# 
-# # Stack the three seasons together
-# stacked_glis <- bind_rows(spring_glis_df, summer_glis_df, autumn_glis_df)
-# 
-# # Create a unique ID for each site-season combination
-# stacked_glis$site_season <- paste0(stacked_glis$site, "_", stacked_glis$season)
-# 
-# # Move ID columns to the front
-# stacked_glis <- stacked_glis %>% relocate(site_season, site, season)
-# 
-# 
-# # Extract id_occasion from rownames
-# spring_glis_df$id_occasion <- rownames(spring_glis)
-# summer_glis_df$id_occasion <- rownames(summer_glis)
-# autumn_glis_df$id_occasion <- rownames(autumn_glis)
-# 
-# # Stack and keep id_occasion
-# stacked_glis <- bind_rows(spring_glis_df, summer_glis_df, autumn_glis_df) %>%
-#   mutate(season = as.factor(season),
-#          site_season = paste0(id_occasion, "_", season))
-
-
 #starting model from first detection V8
 detection_data.glis.occu<- detection_data.glis.occu[,8:26]
 
