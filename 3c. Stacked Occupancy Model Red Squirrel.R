@@ -96,11 +96,10 @@ for (i in 1:length(enddfc$id_occasion)) {
   detection_data.sciurus.occu[enddfc$id_occasion[i],(enddfc$Occasion[i]+1):max.endoccasion]  <- NA
 }
 #starting at first detection
-# detection_data.sciurus.occu <- detection_data.sciurus.occu[,2:29]
-# 
+
 # # assuming detection_matrix_sciurus has 29 columns
 # #adding weeks of Nas because each season must have the same number of weeks
-# detection_data.sciurus.occu[,29:30] <- NA
+
 detection_data.sciurus.occu[,30] <- NA
 spring_sciurus <- detection_data.sciurus.occu[, 1:10]
 summer_sciurus <- detection_data.sciurus.occu[, 11:29]
