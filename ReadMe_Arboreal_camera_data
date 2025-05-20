@@ -1,0 +1,45 @@
+ReadMe – Arboreal camera traps
+Species detected with arboreal camera traps in the years of 2022 (Unterluss) and 2023 (Winnefeld, Nienover, Unterluss, Goehrede). During 
+In 2022, we deployed 25 cameras at one site (5 forest plots) in Northern Germany, as a pilot study, where we tested different camera-set ups, camera models, battery life, bait and non baited stations and the general feasibility of the study. In 2023 we expanded our study to 4 sites (20 forest plots) using 80 camera traps. Each forest plot had 4 cameras traps installed on trees: 3 cameras on the canopy (18 to 30 m) facing the tree branches and one closer to the ground (2 to 3m) facing the tree trunk Individual trees and camera spot were chosen accordingly to feasibility of climbing, canopy connectivity, and a good focal point for the camera.
+File: Camera_data
+Variables/Columns:
+Camera / image variables:
+id_plot – id of the plot: Site (1 to 8) ‘.’ Plot type (1=Pure Dougals-fir, 2=Mixed Douglas/beech, 3=Pure beech, 4=Mixed Spruce/beech, 5=Pure Norway Spruce)
+plot_type–1=Pure Dougals-fir, 2=Mixed Douglas/beech, 3=Pure beech, 4=Mixed Spruce/beech, 5=Pure Norway Spruce
+camera_number – camera unique number
+card_number – card unique number
+platform–  was a platform used to install the camera. Y=Yes. N=N. Platforms were always at heights from 2 to 3.5 meters.
+effort_days–  how long was the specific camera active (in days).
+IMG_number–  number of the video
+Hour_h_mi–  hour when the video was recorded on hh:mm format
+correct_time–  is the previous information the correct time of the video or any camera malfunction occurred, and time cannot be ascertained? TRUE=correct time, FALSE=incorrect time. Obs: all problematic dates were fixed and are correct, where as only times with correct_time=TRUE can be trusted
+Date_m_d–  date when the video was recorded on MM:dd format
+year–  year of the footage
+id_occassion–  combine id camera with year, providing a unique identifier for each camera installation
+Height–  height of installed camera
+
+Animal species variables:
+animal_species- Scientific name of animal species on the video
+First and last video of the camera are also tagged here as “Start start” and “End end”
+class – class of identified animal
+order – order of identified animal 
+family – family of identified animal
+
+
+Tree variables:
+tree_species_c – common name of the tree on which camera was installed (5 characters only; Dougl= Douglas-fir, Beech=Beech, Spruc=Norway spruce)
+tree_species_s – scientific name of the tree on which camera was installed 
+tree_number – number of the tree on which camera was installed 
+id_tree–  unique identifier of the tree, considering all plots (plot_treenumber)
+DBH–  diameter at breast height of the tree of installed camera
+Max_tree_height–  Total Height of the tree
+NDIV – Neighborhood diversity of tree
+Species_type_NDIV - Neighborhood diversity of tree considering conifer as a one group together
+Basal_area_m2 – Basal area in m2 of the tree
+These following were estimated from allometric equations, not directly measured: 
+Crown_radius95 – upper 95 % quantile of crown radius of the tree in meters
+Number_live_branches – number of live branches
+Mass_branches – biomass of branches in kg
+
+
+
